@@ -1,0 +1,556 @@
+@charset "UTF-8";
+
+/*----------------------html------------------------------*/
+html {
+    /*==============スクロールの記述=========================*/
+    scroll-behavior: smooth;
+}
+
+/*----------------------body------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Odibee Sans","helvetica neue", "YuGothic", "ヒラギノ角ゴ pron w3", "Hiragino Kaku Gothic ProN", "Arial", "メイリオ", "Meiryo", "sans-serif";
+    font-size: 1rem;
+    line-height: 150%;
+    color: #000;
+    background: #fff;
+}
+
+#loading {
+    width:100vw;
+    height:100vh;
+    transition: all 5s;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    position: fixed;
+    top: 50px;
+    left: 570px;
+}
+
+.charactor {
+    position: fixed;
+    top: 500px;
+    left: 720px;
+    animation: fade 0.5s infinite ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    } 30% {
+        opacity: .5;
+    } 50% {
+        opacity: .2;
+    } 70% {
+        opacity: .5;
+    } 100% {
+        opacity: 1
+    }
+}
+/*====================================header=====================*/
+header {
+    position: fixed;
+    z-index:1;
+    top:0;
+    background: rgba(238, 190, 201,.5);
+    height: 200vh;
+}
+
+.h_t {
+    font-size: 80px;
+    
+}
+
+.h_t a {
+    text-decoration: none;
+    color: #000;
+}
+
+.h_m {
+    margin: 10px;
+}
+
+.h_m ul {
+    padding: 10px;
+}
+
+.h_m ul li {
+    list-style-type: none;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    
+}
+
+.h_m ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.h_m ul li a:hover {
+    text-decoration:underline;
+    animation: br-color 1s infinite ease-in-out;
+}
+
+.h_m-t {
+    color: grey;
+    font-weight: 500;
+}
+
+@keyframes br-color {
+    0% {
+        background: red;
+    }
+    
+    50%{
+        background: #fff;
+    }
+    
+    100% {
+        background: red;
+    }
+}
+
+.h_c {
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+/*============================top画面============================*/
+#top {
+    margin:0;
+    width:100%;
+    height: 800px;
+    background-image: url(./../image/ChessBourd.jpg);
+    background-size: 100%;
+    position: absolute;
+    top:0;
+}
+
+@media screen and (max-width:1024px) {
+   #top{
+      height: 500px; 
+      width:100%;
+   } 
+}
+   
+
+
+.t_c {
+    position: absolute;
+    top: 450px;
+    left: 600px;
+    line-height: 60px;
+    font-size: 60px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: rgba(255, 255, 255, .5);
+}
+
+@media screen and (max-width:1024px) {
+    .t_c {
+        position:absolute;
+        top:100px;
+        left:400px;
+        font-size: 40px;
+        background: rgba(255, 255, 255, .5);
+    }
+}
+/*------------------------About----------------------------*/
+#About {
+    position: relative;
+    top:700px;
+    height: 1000px;
+    background-image: url(./../image/ChessBourd_2.png);
+}
+.drag-and-drop {
+    position: absolute;
+    top:10px;
+    left:400px;
+    cursor: move;
+    width: 200px;
+}
+
+.drag-and-drop2 {
+    position: absolute;
+    top:400px;
+    left:400px;
+    cursor: move;
+    width: 200px;
+}
+
+.drag-and-drop3 {
+    position: absolute;
+    top:750px;
+    left:400px;
+    cursor: move;
+    width: 200px;
+}
+
+.drag {
+    z-index: 1001;
+}
+
+.a_h {
+    position: relative;
+    top:50px;
+    left:1050px;
+    font-size: 80px;
+    background: rgba(255,255,255,.8);
+    line-height: 60px;
+}
+
+@media screen and (max-width:1024px) {
+    .a_h {
+        position: relative;
+        top:10px;
+        left:400px;
+        font-size: 50px;
+    }
+}
+
+.a_t {
+    position: relative;
+    top: 10px;
+    left: 750px;
+    font-size:20px;
+    line-height: 30px;
+    background: rgba(255, 255, 255, .5);
+    font-family: "Times New Roman";
+} 
+
+.a_la {
+    position: relative;
+    top: 180px;
+    left: 750px;
+    z-index: 1;
+}
+
+.a_la--s {
+    font-size: 80px;
+    
+}
+
+.a_la--s:hover {
+    background: rgba(255,255,255,.3);
+}
+
+.a_ra {
+    position: relative;
+    top: 140px;
+    left: 1285px;
+    z-index: 1;
+}
+
+.a_ra--s {
+    font-size: 80px;
+    
+}
+
+.a_ra--s:hover {
+    background: rgba(255,255,255,.3);
+}
+
+.a_p {
+    position: relative;
+    top:-50px;
+    left:750px;
+}
+/*=======================Rule===================*/
+#Rule {
+    position: relative;
+    top:600px;
+    height: 2000px;
+    background: linear-gradient(125deg,#000,#00f,#0ff,#33ffcc,#33ffff);
+}
+
+.r_h {
+    position:relative;
+    top:50px;
+    left:1050px;
+    font-size: 80px;
+    line-height: 60px;
+}
+
+.r_h--2 {
+    position: relative;
+    top:10px;
+    left:320px;
+    font-size:80px;
+    color: #fff;
+    
+}
+
+.r_h--3 {
+    position: relative;
+    top:10px;
+    left:320px;
+    font-size:80px;
+    color: #fff;
+    
+}
+
+.r_cs--k {
+    position: relative;
+    left:150px;
+    flex-basis: 48%;
+}
+
+.r_cs--k ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.r_cs--k ul li {
+    margin: 0;
+    padding: 0px;
+    flex-basis: 5%;
+    text-align:center;
+    list-style-type: none;
+    height: 140px;
+}
+
+.r_cs--k ul li:nth-child(even) {
+    position: relative;
+    top: 50px;
+}
+.r_cs--k ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+}
+
+.r_cs--k ul li a:hover {
+    color: #000;
+}
+
+.r_cs--p {
+    background-image: url(./../image/pawn_chessmen.jpg);
+}
+
+.r_cs--p:hover {
+    background-image: url(./../image/pawn_chessmen_w.jpg);
+}
+
+
+.r_cs--r {
+    background-image: url(./../image/rook_chessmen.jpg);
+}
+
+.r_cs--r:hover {
+    background-image: url(./../image/rook_chessmen_b.jpg);
+}
+
+.r_cs--b {
+    background-image: url(./../image/bishop_chessmen.jpg);
+}
+
+.r_cs--b:hover {
+    background-image: url(./../image/bishop_chessmen_w.jpg);
+}
+
+.r_cs--n {
+    background-image: url(./../image/knight_chessmen.jpg);
+}
+
+.r_cs--n:hover {
+    background-image: url(./../image/knight_chessmen_b.jpg);
+}
+
+.r_cs--q {
+    background-image: url(./../image/queen_chessmen.jpg);
+}
+
+.r_cs--q:hover {
+    background-image: url(./../image/queen_chessmen_w.jpg);
+}
+
+.r_cs--ki {
+    background-image: url(./../image/king_chessmen.jpg);
+}
+
+.r_cs--ki:hover {
+    background-image: url(./../image/king_chessmen_b.jpg);
+}
+
+
+.r_h--c {
+    position: relative;
+    top:10px;
+    left:370px;
+    font-size:40px;
+    color: #fff;
+    
+}
+
+.r_p {
+    position: relative;
+    left:500px;
+}
+
+.r_p--s {
+    width:10%;
+}
+
+
+.r_t {
+    position:relative;
+    left: 500px;
+}
+
+.r_t th {
+    font-size: 20px;
+    color:#fff;
+    text-align:center;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    background: rgba(204,204,204,.7);
+}
+
+
+.r_t td {
+    font-size: 20px;
+    color:#fff;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    background: rgba(204,204,204,.5);
+}
+
+/*============================Event======================================*/
+
+#Event {
+    position: relative;
+    top:400px;
+    height: 1500px;
+    background: linear-gradient(350deg,#ff4f02,#ff5f17,#ff6928,#ff773e,#ffc7af);
+}
+
+
+
+.e_b{
+    position:relative;
+    top:50px;
+    left:500px;
+}
+
+.e_h {
+    position:relative;
+    top:50px;
+    left:1350px;
+    font-size: 80px;
+    line-height: 60px;
+}
+
+.e_t {
+    background: rgba(255, 255, 255, .5);
+}
+
+.e_t th {
+    border-right: 1px solid #000;
+}
+
+.e_res--h {
+    position: relative;
+    left: 220px;
+    font-size: 50px;
+    font-family: 'Dela Gothic One', cursive;
+    color: #fff;
+}
+
+#calender-ps {
+    position: relative;
+    left: 0px;
+}
+
+#calendar {
+    position: relative;
+    top:100px;
+    text-align: center;
+    width: 100%;
+}
+
+.t_h {
+    border-collapse: collapse;
+    width: 50%;
+    background: #fff;
+}
+
+.t_h th {
+    color: #000;
+}
+
+.t_h th, td {
+    border: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.t_h  td:first-child {
+    color: red;
+}
+
+.t_h  td:last-child {
+    color: blue;
+}
+
+.t_h  td.disabled {
+    color: #ccc;
+}
+
+.today {
+    background-color: #D65E72;
+    color: #fff;
+}
+
+#next-prev-button {
+    position: relative;
+    right: 100px;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: #B78D4A;
+    color: #fff;
+    border: 1px solid #B78D4A;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #D4BB92;
+    border-color: #D4BB92;
+}
+#prev {
+    position: relative;
+    left: 250px;
+    float: left;
+}
+#next {
+    position: relative;
+    left: -650px;
+    float: right;
+    z-index:3333;
+}
+
+#calendartitle {
+    position: relative;
+    top: 80px;
+    left: 410px;
+    font-size: 40px;
+    width: 50%;
+}

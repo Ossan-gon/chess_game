@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../stylesheet/stylesheet.css">
+</head>
+<body>
+    <div id="loading">
+        <img src="./../image/pown.png" class="spinner">
+        <h1 class="charactor">loading...</h1>
+    </div>
+    <header>
+        <h1 class="h_t"><a href=#>Chess Game</a></h1>
+        <nav class="h_m">
+            <ul>
+                <li class="h_m-t">Menu</li>
+                <li><a href="#About">About Chess Game</a></li>
+                <li>
+                    <a href="#Rule">Rule and Chessmen</a>
+                    <ul>
+                        <li><a href="#R2">Rule</a></li>
+                        <li><a href="#Chessmen">Chessmen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Event">Event</a></li>
+            </ul>
+        </nav>
+        <p class="h_c">&copy; ChessGmaeProject</p>
+    </header>
+    <div id="top">
+         <h1 class="t_c">If you want to live wisely,why not have a hobby that makes you wise?</h1>
+    </div>
+    <section id="About">
+        <h1 class="a_h">About Chess Game</h1>
+        <img class="drag-and-drop" src="./../image/k.jpg">
+        <img class="drag-and-drop2" src="./../image/r.jpg">
+        <img class="drag-and-drop3" src="./../image/p.jpg">
+        <p class="a_t">
+            チェスとは、2人で行うボードゲーム、マインドスポーツの一種である。<br>
+            白・黒それぞれ6種類16個の駒を使って、敵のキングを追いつめるゲーム<br>
+            である。チェスプレイヤーの間では、その文化的背景などからボードゲーム<br>
+            であると同時「スポーツ」でも「芸術」でも「科学」でもあるとされ、<br>
+            ゲームに勝つためにはこれらのセンスを総合する能力が必要である。
+        </p>
+        <div class="a_la">
+           <a class="a_la--s"><</a>
+        </div>
+        <div class="a_ra">
+           <a class="a_ra--s">></a>
+        </div>
+        <img src="./../image/ChessPlay_1.jpg" id="photo1" class="a_p" alt="chessplay">
+    </section>
+    <section id="Rule">
+        <h1 class="r_h">Rule and Chessmen</h1>
+        <div id="R2">
+        <h2 class="r_h--2">Rule</h2>
+        <table class="r_t">
+            <tr>
+                <th>①</th>
+                <td>ゲームは2人のプレイヤーにより、チェスボードの盤上で行われる。</td>
+            </tr>
+            <tr>
+                <th>②</th>
+                <td>白が先手、黒が後手となる。</td>
+            </tr>
+            <tr>
+                <th>③</th>
+                <td>プレイヤーは、交互に盤上にある自分の駒を1回ずつ動かす。<br>
+                （トランプなどのような）パスをすることはできない。
+                </td>
+            </tr>
+            <tr>
+                <th>④</th>
+                <td>双方が1回ずつ動かしたときに1手と数える。</td>
+            </tr>
+            <tr>
+                <th>⑤</th>
+                <td>自分の手番の時に、味方の駒の動ける範囲に敵の駒があれば、それを取ることができる。<br>
+                敵の駒を取った駒は、取られた駒のあったマスへ移動する。
+                </td>
+            </tr>
+            <tr>
+                <th>⑥</th>
+                <td>取られた駒は盤上から取り除き、チェスボードの右側（または左側）の手前に置く。</td>
+            </tr>
+            <tr>
+                <th>⑦</th>
+                <td>チェスの駒はナイトを除き、他の駒を飛び越して移動することはできない。ただし、<br>
+                キャスリング時のルークのような例外もある。
+                </td>
+            </tr>
+            <tr>
+                <th>⑧</th>
+                <td>いかなる場合でも、キングは敵の駒が効いている場所には移動することができない。</td>
+            </tr>
+            <tr>
+                <th>⑨</th>
+                <td>相手のキングを自分の駒の効きに入れる手を「チェック」と呼ぶ。</td>
+            </tr>
+            <tr>
+                <th>⑩</th>
+                <td>チェックをかけ、相手が次の手でチェックから逃れることのできない状態を「チェックメイト」<br>
+                と呼ぶ。双方のプレイヤーは、相手のキングをチェックメイトすることを目指す。
+                </td>
+            </tr>
+        </table>
+        </div>
+        <div id="Chessmen">
+        <h2 class="r_h--3">Chessmen</h2>
+        </div>
+        <div class="r_cs--k">
+            <ul>
+                <li class=r_cs--p><a href="#pawn">pawn</a></li>
+                <li class=r_cs--r><a href="#rook">rook</a></li>
+                <li class=r_cs--b><a href="#bishop">bishop</a></li>
+                <li class=r_cs--n><a href="#knight">knight</a></li>
+                <li class=r_cs--q><a href="#queen">queen</a></li>
+                <li class=r_cs--ki><a href="#knight">king</a></li>
+            </ul>
+        </div>
+        <h3 class="r_h--c">Pown</h3>
+        <div class="r_p">
+            <div>
+                <img id="pawn" class="r_p--s" src="./../image/pawn_chessmen.jpg">
+            </div>
+            <div>
+                <p>ポーンはチェスの駒の一種で、歩兵を表している。</p>
+            </div>
+        </div>
+    </section>
+    <section id="Event">
+            <h1 class="e_h">Event</h1>
+        <div class="e_b">
+            <h2>クラスマッチ大会</h2>
+            <table class=e_t>
+                <tr>
+                    <th>概要</th>
+                    <td>各クラスでの大会となります。クラスは「ポーン」、「ルーク」、「ビショップ」、<br>
+                    「ナイト」、「クイーン」、「キング」となっており、今大会から出場される方は<br>
+                    「ポーン」クラスからスタートとなります。クラスアップごとに豪華賞品をもらえます。
+                    </td>
+                </tr>
+                <tr>
+                    <th>参加費</th>
+                    <td>500円<sub>会員費は別途となります。</sub></td>
+                </tr>
+                <tr>
+                    <th>開催日時</th>
+                    <td>2021年8月13日</td>
+                </tr>
+                <tr>
+                    <th>予約締切</th>
+                    <td>2021年7月31日</td>
+                </tr>
+                <tr>
+                    <th>会場</th>
+                    <td>東京駅内休憩フロワー</td>
+                </tr>
+                <tr>
+                    <th>住所</th>
+                    <td>〒100-0005 東京都千代田区丸の内１丁目</td>
+                </tr>
+            </table>
+            <p class="e_res--h">予約締切まで</p>
+            <p class="e_res--h">あと
+                <span id="day"></span>日
+                <span id="hour"></span>時間
+                <span id="min"></span>分
+                <span id="sec"></span>秒
+            </p>
+            <p id="tet" class="e_res--h"></p>
+            <h2 id="c_h">イベントカレンダー</h2>
+            <div id="calender-ps">
+                <h2 id="calendartitle"></h2>
+                <div id="next-prev-button">
+                    <button id="prev" onclick="prev()"><<</button>
+                    <button id="next" onclick="next()">>></button>
+                </div>
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </section>
+    <script src="./../script/script.js"></script>
+</body>
+</html>
